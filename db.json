@@ -7,13 +7,13 @@
       "categoria": "bebida-caliente"
     },
     {
-      "id": 1,
+      "id": 2,
       "nombreProducto": "Medialuna",
       "precioProducto": "30",
       "categoria": "dulce"
     },
     {
-      "id": 1,
+      "id": 3,
       "nombreProducto": "submarino",
       "precioProducto": "80",
       "categoria": "bebida-rica"
