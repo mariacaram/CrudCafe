@@ -1,0 +1,23 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombreProducto": "cafe con leche",
+      "precioProducto": "40",
+      "categoria": "bebida-caliente"
+    },
+    {
+      "id": 1,
+      "nombreProducto": "Medialuna",
+      "precioProducto": "30",
+      "categoria": "dulce"
+    },
+    {
+      "id": 1,
+      "nombreProducto": "submarino",
+      "precioProducto": "80",
+      "categoria": "bebida-rica"
+    }
+  ]
+
+}
