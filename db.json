@@ -1,90 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombreProducto": "cafe con leche",
-      "precioProducto": "40",
-      "categoria": "bebida-caliente"
-    },
-    {
-      "id": 2,
-      "nombreProducto": "Medialuna",
-      "precioProducto": "30",
-      "categoria": "dulce"
-    },
-    {
-      "id": 3,
-      "nombreProducto": "submarino",
-      "precioProducto": "80",
-      "categoria": "bebida-rica"
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 4
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 5
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 6
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 7
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 8
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 9
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 10
-    },
-    {
-      "nombreProducto": "mermelada",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 11
-    },
-    {
-      "nombreProducto": "otro",
-      "precioProducto": "2",
-      "categoria": "dulce",
-      "id": 12
-    },
-    {
-      "nombreProducto": "cafe",
-      "precioProducto": "20",
-      "categoria": "bebida-caliente",
-      "id": 13
-    },
-    {
-      "nombreProducto": "alfajores",
-      "precioProducto": "26",
-      "categoria": "dulce",
-      "id": 14
-    },
-    {
       "nombreProducto": "galleta",
       "precioProducto": "26",
       "categoria": "dulce",
@@ -107,18 +23,6 @@
       "precioProducto": "2",
       "categoria": "bebida-caliente",
       "id": 18
-    },
-    {
-      "nombreProducto": "Prueba",
-      "precioProducto": "78",
-      "categoria": "bebida-caliente",
-      "id": 19
-    },
-    {
-      "nombreProducto": "nuez confitada",
-      "precioProducto": "3",
-      "categoria": "dulce",
-      "id": 20
     }
   ]
 }

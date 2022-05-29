@@ -12,7 +12,7 @@ const ListaProductos = (props) => {
 <Link to="/nuevo" className="btn btn-primary">Agregar</Link>
       </article>
       <ListGroup>
-{props.productos.map ((producto)=> <ItemProducto producto = {producto} key = {producto.id} ></ItemProducto>)}
+{props.productos.map ((producto)=> <ItemProducto producto = {producto} key = {producto.id} consultarAPI={props.consultarAPI} ></ItemProducto>)}
           
 
       </ListGroup>
