@@ -1,13 +1,13 @@
 {
   "productos": [
     {
-      "nombreProducto": "galleta",
+      "nombreProducto": "mefijosisemodifica",
       "precioProducto": "26",
       "categoria": "dulce",
       "id": 15
     },
     {
-      "nombreProducto": "otros",
+      "nombreProducto": "estoyhaciendootraprueba",
       "precioProducto": "26",
       "categoria": "dulce",
       "id": 16
