@@ -3,16 +3,16 @@ import { Form, Modal, Button, Container, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { campoRequerido, rangoNumero } from "../helpers/helpers";
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 
 const EditarProducto = (props) => {
   const { id } = useParams();
   // console.log(id);
   const [producto, setProducto] = useState({});
-  const [categoria, setCategoria] = useState('');
+  const [categoria, setCategoria] = useState("");
   const URL = process.env.REACT_APP_API_URL + "/" + id;
   //crear variables ref
-  const nombreProductoRef = useRef('');
+  const nombreProductoRef = useRef("");
   const precioProductoRef = useRef(0);
 
   useEffect(async () => {
@@ -25,7 +25,7 @@ const EditarProducto = (props) => {
         const dato = await respuesta.json();
         // console.log(dato);
         setProducto(dato);
-        setCategoria(dato.categoria)
+        setCategoria(dato.categoria);
       }
     } catch (error) {
       console.log(error);
@@ -33,51 +33,52 @@ const EditarProducto = (props) => {
     }
   }, []);
 
-  const handleSubmit = async(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     //validar los campos
     // console.log(nombreProductoRef)
     // console.log(nombreProductoRef.current.value)
-    if(campoRequerido(nombreProductoRef.current.value) && rangoNumero(precioProductoRef.current.value) && campoRequerido(categoria)){
+    if (
+      campoRequerido(nombreProductoRef.current.value) &&
+      rangoNumero(precioProductoRef.current.value) &&
+      campoRequerido(categoria)
+    ) {
       //console.log('aqui envio los datos')
-       //construir el objeto a enviar a la api
-      const productoModificado ={
+      //construir el objeto a enviar a la api
+      const productoModificado = {
         nombreProducto: nombreProductoRef.current.value,
         precioProducto: precioProductoRef.current.value,
-        categoria
-      }
-     // console.log(productoModificado)
-     try{
-       //consulta PUT para modificar valores en la api
-      const respuesta = await fetch(URL,{
-        method: "PUT",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify(productoModificado)
-      })
+        categoria,
+      };
+      // console.log(productoModificado)
+      try {
+        //consulta PUT para modificar valores en la api
+        const respuesta = await fetch(URL, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(productoModificado),
+        });
 
-      console.log(respuesta);
-      if(respuesta.status === 200){
-        console.log ("Funciona ok")
-        //mostrar un cartel al usuario
-        Swal.fire(
-          'Producto modificado',
-          'Su producto fue correctamente actualizado',
-          'success'
-        )
-        //consultar nuevamente a la api
-        props.consultarAPI();
+        console.log(respuesta);
+        if (respuesta.status === 200) {
+          console.log("Funciona ok");
+          //mostrar un cartel al usuario
+          Swal.fire(
+            "Producto modificado",
+            "Su producto fue correctamente actualizado",
+            "success"
+          );
+          //consultar nuevamente a la api
+          props.consultarAPI();
+        }
+      } catch (error) {
+        console.log(error);
       }
-
-     }catch(error){
-       console.log(error);
-     }
-    }else{
+    } else {
       //mostrar un cartel error
-      console.log('mostrar el error');
-
-
-    } 
-  }
+      console.log("mostrar el error");
+    }
+  };
 
   return (
     <Container>
@@ -105,7 +106,10 @@ const EditarProducto = (props) => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Label>Categoria*</Form.Label>
-          <Form.Select value={categoria} onChange={(e)=> setCategoria(e.target.value)}>
+          <Form.Select
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
             <option value="">Seleccione una opcion</option>
             <option value="bebida-caliente">Bebida Caliente</option>
             <option value="bebida-fria">Bebida Fria</option>

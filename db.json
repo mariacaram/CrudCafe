@@ -1,12 +1,6 @@
 {
   "productos": [
     {
-      "nombreProducto": "mefijosisemodifica",
-      "precioProducto": "26",
-      "categoria": "dulce",
-      "id": 15
-    },
-    {
       "nombreProducto": "estoyhaciendootraprueba",
       "precioProducto": "26",
       "categoria": "dulce",
