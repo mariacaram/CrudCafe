@@ -3,7 +3,7 @@ import { ListGroup, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 const ItemProducto = (props) => {
-  const URL = process.env.REACT_APP_API_URL + "/" + props.producto.id;
+  const URL = process.env.REACT_APP_API_URL + "/" + props.producto._id;
   const eliminarProducto = () => {
     console.log(URL);
     Swal.fire({
@@ -45,7 +45,7 @@ const ItemProducto = (props) => {
       <div>
         <Link
           className="btn btn-warning me-2 "
-          to={`/editar/${props.producto.id}`}
+          to={`/editar/${props.producto._id}`}
         >
           Editar
         </Link>
