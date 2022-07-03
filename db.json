@@ -1,8 +1,8 @@
 {
   "productos": [
     {
-      "nombreProducto": "estoyhaciendootraprueba",
-      "precioProducto": "26",
+      "nombreProducto": "Galletitas de maicen",
+      "precioProducto": "25",
       "categoria": "dulce",
       "id": 16
     },
