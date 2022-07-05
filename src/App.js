@@ -14,9 +14,7 @@ function App() {
   const URL = process.env.REACT_APP_API_URL;
   console.log(URL);
   const [productos, setProductos] = useState([]);
-  useEffect(() => {
-    consultarAPI();
-  }, []);
+
 
   const consultarAPI = async () => {
     try {
@@ -28,6 +26,10 @@ function App() {
       console.log(error);
     }
   };
+  useEffect(() => {
+    consultarAPI();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <Router>
       <Navigation></Navigation>
